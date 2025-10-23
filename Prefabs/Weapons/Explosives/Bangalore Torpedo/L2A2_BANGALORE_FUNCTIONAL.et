@@ -1,0 +1,19 @@
+GenericEntity : "{1CC0CBB56B9F7ADB}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112_base.et" {
+ ID "5968D2B6A82C6019"
+ components {
+  ActionsManagerComponent "{5AA692DC30B9C623}" {
+   additionalActions {
+    SCR_BangaloreDuplicateAction "{66AEDCABCF1A1FEF}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{66AEDCABE879E833}" {
+      Name "Push Bangalore"
+      Description "Push Bangalore"
+     }
+     ActionTitle "Push Bangalore"
+    }
+   }
+  }
+ }
+}

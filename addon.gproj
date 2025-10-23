@@ -1,0 +1,8 @@
+GameProject {
+ ID "FunctionalBangalore"
+ GUID "66A68CAFC8B00A5C"
+ TITLE "FunctionalBangalore"
+ Dependencies {
+  "6188E60124E3CDCC" "58D0FB3206B6F859"
+ }
+}

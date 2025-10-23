@@ -1,0 +1,16 @@
+GenericEntity : "{0C923757B8B8306B}Prefabs/Compositions/Misc/FreeRoamBuilding/BarbedTapeTriple_S_USSR_01.et" {
+ coords 127.576 1 127.568
+}
+GenericEntity : "{7DFDF473E6AD9C2C}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et" {
+ components {
+  ActionsManagerComponent "{5AA692DC30B9C623}" {
+   additionalActions {
+    SCR_BangaloreDuplicateAction "{66AEDCABCF1A1FEF}" {
+     m_fOffset 1
+     spawn_object "{7DFDF473E6AD9C2C}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et"
+    }
+   }
+  }
+ }
+ coords 127.109 1 127.671
+}
