@@ -1,6 +1,13 @@
 GenericEntity : "{1CC0CBB56B9F7ADB}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112_base.et" {
  ID "5968D2B6A82C6019"
  components {
+  SCR_ExplosiveTriggerComponent "{5AA692DC30B9C65A}" {
+   PROJECTILE_EFFECTS {
+    ExplosionEffect "{5F10E04100CCC508}" {
+     EffectPrefab "{A538B7481617A645}Prefabs/Weapons/Warheads/Warhead_Bangalore.et"
+    }
+   }
+  }
   ActionsManagerComponent "{5AA692DC30B9C623}" {
    additionalActions {
     SCR_BangaloreDuplicateAction "{66AEDCABCF1A1FEF}" {

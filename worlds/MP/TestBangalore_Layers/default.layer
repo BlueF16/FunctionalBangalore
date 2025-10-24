@@ -14,3 +14,19 @@ GenericEntity : "{7DFDF473E6AD9C2C}Prefabs/Weapons/Explosives/Bangalore Torpedo/
  }
  coords 127.109 1 127.671
 }
+$grp StaticModelEntity : "{93E06E731212BD96}Prefabs/Structures/Walls/BarbedWire/BarbedTape_01/BarbedTape_01_Triple.et" {
+ {
+  components {
+   Hierarchy "{5E64B54D0EE72D6B}" {
+   }
+  }
+  coords 129.613 0 127.104
+ }
+ {
+  components {
+   Hierarchy "{5E64B54D0EE72D6B}" {
+   }
+  }
+  coords 131.932 0 126.959
+ }
+}
