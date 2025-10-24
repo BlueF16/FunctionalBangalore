@@ -1,8 +1,26 @@
+GenericEntity : "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et" {
+ coords 123.206 1 128.253
+}
 GenericEntity : "{0C923757B8B8306B}Prefabs/Compositions/Misc/FreeRoamBuilding/BarbedTapeTriple_S_USSR_01.et" {
  coords 127.576 1 127.568
 }
-GenericEntity : "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et" {
- coords 127.047 1 127.549
+$grp GenericEntity : "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et" {
+ {
+  components {
+   ActionsManagerComponent "{5AA692DC30B9C623}" {
+    additionalActions {
+     SCR_BangaloreDuplicateAction "{66B0CB459CCC7FD5}" {
+      spawn_object "{C3E5D94AF3627E55}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_NOACTION.et"
+      inventory_object "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et"
+     }
+    }
+   }
+  }
+  coords 127.047 1 127.549
+ }
+ {
+  coords 122.86 1 123.303
+ }
 }
 GenericEntity : "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et" {
  coords 119.91 1 128.891
@@ -44,4 +62,7 @@ GenericEntity : "{A3C5CF932DE8261F}PrefabsEditable/Auto/Props/Military/AmmoBoxes
   }
  }
  coords 123.324 1 126.286
+}
+GenericEntity : "{C3E5D94AF3627E55}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_NOACTION.et" {
+ coords 124.145 1 118.151
 }

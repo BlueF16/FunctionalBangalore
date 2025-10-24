@@ -8,15 +8,26 @@
 		[Attribute("",UIWidgets.ResourceNamePicker)]
 		protected ResourceName spawn_object;
 	
+	
+		[Attribute("",UIWidgets.ResourceNamePicker)]
+		protected ResourceName inventory_object;
+	
 
 		ref array<IEntity> SPAWNEDBANGS = {};
+	
+	
+	
+		array<IEntity> GetSpawnBangs()
+	{
+		return SPAWNEDBANGS;
+	}
 			
 	
 	
 	
-		bool HasItem(IEntity pUserEntity, ResourceName spawn_object)
+		bool HasItem(IEntity pUserEntity, ResourceName inventory_object)
     	{
-        	if (!pUserEntity || spawn_object.IsEmpty())
+        	if (!pUserEntity || inventory_object.IsEmpty())
             	return false;
         
         // Get the inventory storage manager from the player
@@ -45,14 +56,14 @@
 	
                 
             // Compare the item's prefab resource name with the one we're looking for
-            if (prefabData.GetPrefabName() == spawn_object)
+            if (prefabData.GetPrefabName() == inventory_object)
             {
-                Print("Item found in inventory: " + spawn_object, LogLevel.NORMAL);
+                Print("Item found in inventory: " + inventory_object, LogLevel.NORMAL);
                 return true;
             }
         }
         
-        Print("Item NOT found in inventory: " + spawn_object, LogLevel.WARNING);
+        Print("Item NOT found in inventory: " + inventory_object, LogLevel.WARNING);
         return false;
     	}
 	
@@ -60,7 +71,7 @@
 	    override bool CanBePerformedScript(IEntity user)
     	{
         // Check if the user has the required item before allowing the action
-        if (!HasItem(user, spawn_object))
+        if (!HasItem(user, inventory_object))
         {
             return false;
         }
@@ -69,10 +80,7 @@
 		{
 			return false;
 		}
-		
-		
-        
-        return true;
+				                return true;
 	    }
 		
 			
@@ -103,7 +111,7 @@
 			
 			
 			SPAWNEDBANGS.Insert(GetGame().SpawnEntityPrefab(Resource.Load(spawn_object),GetGame().GetWorld(),PARAM_SPAWN));
-			RemoveOneMatchingItemOnServer(pUserEntity, spawn_object);
+			RemoveOneMatchingItemOnServer(pUserEntity, inventory_object);
 		}
 	
 	

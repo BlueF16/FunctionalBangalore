@@ -1,0 +1,212 @@
+GenericEntity {
+ ID "66B0CB011B58DDBF"
+ components {
+  SignalsManagerComponent "{66B0CB0160DDC8DF}" {
+  }
+  MeshObject "{66B0CB0160DDC950}" {
+   Object "{CAD0692A42E9E994}Assets/Explosives/Bangalore Torpedo/L2A2 Bangalore Torpedo.xob"
+   LODFactors {
+    1 1 1
+   }
+  }
+  RigidBody "{66B0CB0160DDC9A7}" {
+   ResponseIndex "TinyDestructible"
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_ExplosiveChargeComponent "{66B0CB0160DDC9A3}" {
+  }
+  SCR_ExplosiveChargeInventoryItemComponent "{66B0CB0160DDCE8D}" {
+   Attributes SCR_ItemAttributeCollection "{66B0CB0160DDCE93}" {
+    ItemDisplayName WeaponUIInfo "{66B0CB0160DDC9E3}" {
+     Name "L2A2 Bangalore Torpedo"
+     Description "#AR-Weapon_M112DemoCharge_Description"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{66B0CB0160DDC9D0}" {
+     Weight 0.57
+     SizeSetupStrategy Manual
+     ItemDimensions 10 10 10
+     ItemVolume 400
+     DimensionScaler 1
+     RestingAdditiveRotationLS 0 0 0
+     RestingAdditiveOffsetLS 0 0 0
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{66B0CB0160DDCE63}" {
+     IkSettings {
+      ItemIKSettings "{66B0CB0160DDCE39}" {
+       MovementSpeedRange 0 3
+      }
+      ItemIKSettings "{66B0CB0160DDCE33}" {
+       Lowered 1
+       InAds 0
+       OutAds 0
+       MovementSpeedRange 0 0
+      }
+      ItemIKSettings "{66B0CB0160DDCE2A}" {
+       Jumping 1
+       InAds 0
+       OutAds 0
+       MovementSpeedRange 0 0
+      }
+      ItemIKSettings "{66B0CB0160DDCE27}" {
+       ProneTurn 1
+       MovementSpeedRange 0 0
+       IkSettingsStand 4
+      }
+     }
+     AnimationInstance "{4FCBEA45CAEBC9C0}anims/workspaces/player/player_main_1h.asi"
+     AnimationIKPose "{ADA8287EEE81F47D}Assets/Weapons/Explosives/DemoBlock_M112/anims/p_M112_IK.anm"
+     HandAdditiveRotation 90 0 0
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{66B0CB0160DDCEBE}" {
+      CameraPreset Top
+      CameraOrbitAngles -25 -30 0
+      CameraOffset 0.025 0 0
+      FOV 60
+      AspectRatio 1
+      LodModel 1
+     }
+     CharacterModifierAttributes "{66B0CB0160DDCEB8}" {
+     }
+    }
+    CommonItemType "EXPLOSIVE_CHARGE"
+    m_Size SLOT_1x1
+    m_SlotType SLOT_BACKPACK
+   }
+  }
+  SCR_ExplosiveTriggerComponent "{66B0CB0160DDCECE}" {
+   PROJECTILE_EFFECTS {
+    AIExplosionEffect "{66B0CB0160DDCEF0}" {
+    }
+    ExplosionEffect "{66B0CB0160DDCEDD}" {
+     EffectPrefab "{A538B7481617A645}Prefabs/Weapons/Warheads/Warhead_Bangalore.et"
+     SoundEvent "SOUND_EXPLOSION"
+    }
+   }
+  }
+  SCR_MineDamageManager "{66B0CB0160DDCF62}" {
+   "Additional hit zones" {
+    SCR_HitZone Main {
+     ColliderNames {
+      "UBX_Torpedo"
+     }
+     HZDefault 1
+     DamageReduction 0
+     DamageThreshold 0.8
+     "Collision multiplier" 0
+     "Melee multiplier" 0
+     "Kinetic multiplier" 0
+     "Fragmentation multiplier" 0
+     "Explosive multiplier" 2.5
+     "Incendiary multiplier" 0
+    }
+   }
+  }
+  SCR_PlaceableItemComponent "{66B0CB0160DDCF4E}" {
+   m_bCanAttachToDynamicObject 1
+   m_bCanAttachAngled 1
+   m_eIgnoredPhysicsLayers 4718592
+   m_aIgnoredComponents {
+    "WeaponComponent" "SCR_RotorDamageManagerComponent"
+   }
+   m_eMeasurementMethod FROM_CENTER_OF_MASS
+   m_fMaxPlacementDistance 1.4
+   m_ePlacementType XYZ
+  }
+  SCR_SoundDataComponent "{66B0CB0160DDCF9B}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{66B0CB0160DDCFBE}" {
+     m_sSoundProject "{CC0E5A1324E761C1}Sounds/Items/_SharedData/Drop/Items_Drop_Generic.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+    SCR_AudioSourceConfiguration "{66B0CB0160DDCFB7}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{66B0CB0160DDCFB3}" {
+     m_sSoundProject "{12A94705DF2BFD25}Sounds/Items/_SharedData/PickUp/Items_PickUp_Generic.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+    }
+    SCR_AudioSourceConfiguration "{66B0CB0160DDCFAF}" {
+     m_sSoundProject "{180B4B22F7EBB2BB}Sounds/Weapons/Explosives/DemoBlocks/_SharedData/Weapons_DemoBlock_Handling.acp"
+     m_sSoundEventName "SOUND_PLACEMENT"
+    }
+    SCR_AudioSourceConfiguration "{66B0CB0160DDCFA6}" {
+     m_sSoundProject "{180B4B22F7EBB2BB}Sounds/Weapons/Explosives/DemoBlocks/_SharedData/Weapons_DemoBlock_Handling.acp"
+     m_sSoundEventName "SOUND_ARM"
+    }
+    SCR_AudioSourceConfiguration "{66B0CB0160DDCFA4}" {
+     m_sSoundProject "{180B4B22F7EBB2BB}Sounds/Weapons/Explosives/DemoBlocks/_SharedData/Weapons_DemoBlock_Handling.acp"
+     m_sSoundEventName "SOUND_DISARM"
+    }
+    SCR_AudioSourceConfiguration "{66B0CB0160DDCFA1}" {
+     m_sSoundProject "{180B4B22F7EBB2BB}Sounds/Weapons/Explosives/DemoBlocks/_SharedData/Weapons_DemoBlock_Handling.acp"
+     m_sSoundEventName "SOUND_TIMER_ADJUST"
+    }
+    SCR_AudioSourceConfiguration "{66B0CB0160DDCF9A}" {
+     m_sSoundProject "{180B4B22F7EBB2BB}Sounds/Weapons/Explosives/DemoBlocks/_SharedData/Weapons_DemoBlock_Handling.acp"
+     m_sSoundEventName "SOUND_CONNECT"
+    }
+   }
+  }
+  SlotManagerComponent "{66B0CB0160DDCC38}" {
+   Slots {
+    FuzeSlotInfo timedFuze_PoC {
+     Offset -0.5182 0.0249 0
+     Angles 90 -90 -180
+     Prefab "{97AFF96B7AB95845}Prefabs/Weapons/Explosives/DemoBlock_TSh400g/DemoBlock_TSh400g_Fuze_VZD-1M.et"
+     m_eFuzeType TIMED
+    }
+    FuzeSlotInfo remoteFuze_PoC {
+     Offset -0.5182 0.0249 0
+     Angles 90 -90 -180
+     Prefab "{97AFF96B7AB95844}Prefabs/Weapons/Explosives/DemoBlock_TSh400g/DemoBlock_TSh400g_Fuze_ZDP-r.et"
+     m_eFuzeType REMOTE
+    }
+   }
+  }
+  WeaponComponent "{66B0CB0160DDCCB0}" {
+   WeaponType FragGrenade
+   AllowedRaise "ADS and raised allowed"
+   shouldHandleObstruction 0
+   SoundInt 1000200
+   UIInfo GrenadeUIInfo "{66B0CB0160DDCC07}" {
+    Name "Bangalore Torpedo"
+    Description "Used for destroying Barbed wire and fortifications"
+    m_MagIndicator SCR_MagazineIndicatorConfiguration "{66B0CB0160DDCC14}" {
+     m_sOutline "explosive-charge"
+     m_bProgressBar 0
+    }
+    m_eAmmoTypeFlags HE
+   }
+   WeaponSlotType "grenade"
+   WeaponOffset 0 0 0
+   WeaponOffsetADS 0 0 0
+  }
+  WeaponAnimationComponent "{66B0CB0160DDC221}" {
+   AnimGraph "{7A7092BE09EA333C}Assets/Weapons/Explosives/workspace/M112.agr"
+   AnimInstance "{971AC76515E361D2}Assets/Weapons/Explosives/workspace/M112.asi"
+   AnimInjection AnimationAttachmentInfo "{66B0CB0160DDCDC9}" {
+    AnimGraph "{7A7092BE09EA333C}Assets/Weapons/Explosives/workspace/M112.agr"
+    AnimInstance "{971AC76515E361D2}Assets/Weapons/Explosives/workspace/M112.asi"
+    BindingName "Weapon"
+   }
+   BindWithInjection 1
+   AnimCommandsToBind {
+    ""
+   }
+   AutoVariablesBind 1
+   AnimVariablesToBind {
+    ""
+   }
+  }
+  RplComponent "{66B0CB0160DDC214}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{66B0CB0160DDC211}" {
+  }
+ }
+ coords 124.272 1 120.396
+}

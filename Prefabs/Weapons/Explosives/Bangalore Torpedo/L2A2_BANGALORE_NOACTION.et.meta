@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C3E5D94AF3627E55}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_NOACTION.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

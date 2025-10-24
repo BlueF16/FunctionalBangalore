@@ -10,6 +10,9 @@ GenericEntity : "{7DFDF473E6AD9C2C}Prefabs/Weapons/Explosives/Bangalore Torpedo/
   }
   ActionsManagerComponent "{5AA692DC30B9C623}" {
    additionalActions {
+    SCR_PickUpItemActionBangalore "{5AA692DC30B9C63D}" {
+     inventory_object "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et"
+    }
     SCR_BangaloreDuplicateAction "{66B0CB459CCC7FD5}" {
      ParentContextList {
       "default"
@@ -20,7 +23,8 @@ GenericEntity : "{7DFDF473E6AD9C2C}Prefabs/Weapons/Explosives/Bangalore Torpedo/
      }
      ActionTitle "Push Bangalore"
      m_fOffset 1
-     spawn_object "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et"
+     spawn_object "{C3E5D94AF3627E55}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_NOACTION.et"
+     inventory_object "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et"
     }
    }
   }
