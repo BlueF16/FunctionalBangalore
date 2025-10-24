@@ -42,7 +42,7 @@
             if (!prefabData)
                 continue;
 			
-			Print(prefabData.GetPrefabName());
+	
                 
             // Compare the item's prefab resource name with the one we're looking for
             if (prefabData.GetPrefabName() == spawn_object)
@@ -64,6 +64,13 @@
         {
             return false;
         }
+		
+		if (SPAWNEDBANGS.Count()>4)
+		{
+			return false;
+		}
+		
+		
         
         return true;
 	    }
@@ -96,6 +103,41 @@
 			
 			
 			SPAWNEDBANGS.Insert(GetGame().SpawnEntityPrefab(Resource.Load(spawn_object),GetGame().GetWorld(),PARAM_SPAWN));
+			RemoveOneMatchingItemOnServer(pUserEntity, spawn_object);
 		}
+	
+	
+	
+	protected void RemoveOneMatchingItemOnServer(IEntity pUserEntity, ResourceName wantPrefab)
+	{
+		if (!Replication.IsServer()) return;
+		if (!pUserEntity || wantPrefab.IsEmpty()) return;
+
+		InventoryStorageManagerComponent inv = InventoryStorageManagerComponent.Cast(
+			pUserEntity.FindComponent(InventoryStorageManagerComponent)
+		);
+		if (!inv) return;
+
+		// (Optional but recommended) sanity check: only process if request is valid proximity-wise
+		// if (!inv.ValidateStorageRequest(pUserEntity)) return; // uncomment if you’re validating clients
+
+		array<IEntity> allItems = {};
+		inv.GetItems(allItems);
+
+		foreach (IEntity item : allItems)
+		{
+			if (!item) continue;
+			EntityPrefabData pd = item.GetPrefabData();
+			if (!pd) continue;
+
+			if (pd.GetPrefabName() == wantPrefab)
+			{
+				// Delete exactly one
+				inv.TryDeleteItem(item); // server authoritative deletion; replicates to clients
+				return;
+			}
+		
+		}
+	}
 	
 	}
