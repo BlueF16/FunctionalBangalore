@@ -19,6 +19,8 @@ GenericEntity : "{1CC0CBB56B9F7ADB}Prefabs/Weapons/Explosives/DemoBlock_M112/Dem
       Description "Push Bangalore"
      }
      ActionTitle "Push Bangalore"
+     spawn_object "{7DFDF473E6AD9C2C}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et"
+     inventory_object "{CAD0692A42E9E994}Assets/Explosives/Bangalore Torpedo/L2A2 Bangalore Torpedo.xob"
     }
    }
   }
