@@ -1,0 +1,73 @@
+SCR_DestructionManager : "{E5B570B5F32A7BAE}Prefabs/Systems/Destruction/DestructionManager.et" {
+ coords 6417.957 158.127 6769.773
+}
+SCR_BaseGameMode GameMode_Plain1 : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
+ coords 6409.625 159.737 6772.418
+}
+SCR_FactionManager FactionManager : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
+ coords 6412.999 159.198 6771.971
+}
+ProjectileSoundsManager : "{B4DA8B0024536625}Prefabs/World/Game/ProjectileSoundsManager.et" {
+ coords 6416.582 158.519 6770.951
+}
+RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+ coords 6415.703 158.456 6769.854
+}
+ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords 6417.476 158.622 6772.342
+}
+GenericEntity : "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et" {
+ coords 6549.062 144.142 6745.352
+ angleX 0.851
+ angleY 0.707
+ angleZ 3.587
+}
+GenericEntity : "{14B2D417839BF8A3}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USSR.et" {
+ coords 6549.474 144.125 6745.864
+ angleX 0.892
+ angleY 0.056
+ angleZ 3.577
+}
+GenericEntity : "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et" {
+ coords 6549.427 144.105 6744.366
+ angleX 0.892
+ angleY 0.056
+ angleZ 3.577
+}
+SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 6550.864 143.991 6743.437
+ angleX 1.783
+ angleY 0.112
+ angleZ 3.578
+}
+SCR_LoadoutManager : "{97EF4C1A41F63DDB}Prefabs/MP/Managers/Loadouts/LoadoutManager_USxUSSR.et" {
+ coords 6415.758 159.012 6773.395
+}
+SCR_MPDestructionManager : "{9BB369F2803C6F71}Prefabs/MP/MPDestructionManager.et" {
+ coords 6418.144 158.707 6773.456
+}
+GenericEntity : "{A3C5CF932DE8261F}PrefabsEditable/Auto/Props/Military/AmmoBoxes/US/E_EquipmentBoxWooden_Launcher_01_US.et" {
+ components {
+  SCR_SoundDataComponent "{5C53391603B5CF41}" {
+   Enabled 1
+  }
+  SCR_UniversalInventoryStorageComponent "{5476A2F100DF4EFF}" {
+   Enabled 1
+   MultiSlots {
+    MultiSlotConfiguration "{66B0CB41DBFF54D2}" {
+     SlotTemplate InventoryStorageSlot BANGALORE {
+      Prefab "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et"
+     }
+     NumSlots 10
+    }
+   }
+  }
+  ActionsManagerComponent "{5476B36C403D4CC0}" {
+   Enabled 1
+  }
+ }
+ coords 6549.181 144.085 6743.385
+ angleX 2.622
+ angleY 0.979
+ angleZ 3.618
+}

@@ -102,8 +102,12 @@
 			
 			
 			float y = SCR_TerrainHelper.GetTerrainY({x,0,z},GetGame().GetWorld());
-			
+		
 			vector newpos = {x,y,z};
+			vector normal = SCR_TerrainHelper.GetTerrainNormal(newpos,GetGame().GetWorld());
+		
+			
+			
 			mat[3]=newpos;
 			
 			EntitySpawnParams PARAM_SPAWN = new EntitySpawnParams();

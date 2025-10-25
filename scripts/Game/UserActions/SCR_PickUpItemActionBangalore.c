@@ -4,8 +4,8 @@ class SCR_PickUpItemActionBangalore : SCR_InventoryAction
 {
 	#ifndef DISABLE_INVENTORY
 	//------------------------------------------------------------------------------------------------
-	//[Attribute("",UIWidgets.ResourceNamePicker)]
-		//protected ResourceName inventory_object;
+	[Attribute("",UIWidgets.ResourceNamePicker)]
+		protected ResourceName inventory_object;
 	
 	
 	
@@ -47,19 +47,16 @@ class SCR_PickUpItemActionBangalore : SCR_InventoryAction
 		
 		auto pInventoryManager = SCR_InventoryStorageManagerComponent.Cast( pUserEntity.FindComponent( SCR_InventoryStorageManagerComponent ) );
 		bool isFull = false;
-		EntitySpawnParams PARAM_SPAWN = new EntitySpawnParams();
+		
 		IEntity item;
 		
 		for (int i=spawned.Count()-1, count = spawned.Count(); i >= 0; --i) // optimised
-			{
-			//item = GetGame().SpawnEntityPrefab(Resource.Load(inventory_object),GetGame().GetWorld(),PARAM_SPAWN);		 	
-			//manager.InsertItem(item);
-			//SCR_EntityHelper.DeleteEntityAndChildren(spawned[i]);
-			manager.InsertItem(spawned[i]);
+			
+		{
+			
+			manager.TrySpawnPrefabToStorage(inventory_object);
+			SCR_EntityHelper.DeleteEntityAndChildren(spawned[i]);
 			spawned.Remove(i);
-			
-			
-			
 			
 						if ( !pInventoryManager.CanInsertItem( m_Item.GetOwner(), EStoragePurpose.PURPOSE_DEPOSIT ) )
 					{
