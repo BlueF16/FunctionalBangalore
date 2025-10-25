@@ -15,6 +15,8 @@
 
 		ref array<IEntity> SPAWNEDBANGS = {};
 	
+		const float LIFT = 0.2;
+	
 	
 	
 		array<IEntity> GetSpawnBangs()
@@ -101,17 +103,22 @@
 			
 			
 			
-			float y = SCR_TerrainHelper.GetTerrainY({x,0,z},GetGame().GetWorld());
+			float y = SCR_TerrainHelper.GetTerrainY({x,0,z},GetGame().GetWorld()) + LIFT;
+		
 		
 			vector newpos = {x,y,z};
 			vector normal = SCR_TerrainHelper.GetTerrainNormal(newpos,GetGame().GetWorld());
-		
+			float pitch = Math.Atan2(normal[0], normal[1]);
+			vector  matrotation[4];
+			Math3D.DirectionAndUpMatrix(mat[2],normal,matrotation);
 			
 			
 			mat[3]=newpos;
+			mat[1]=normal;
+			matrotation[3]=newpos;
 			
 			EntitySpawnParams PARAM_SPAWN = new EntitySpawnParams();
-			PARAM_SPAWN.Transform=mat;
+			PARAM_SPAWN.Transform=matrotation;
 			
 			
 			SPAWNEDBANGS.Insert(GetGame().SpawnEntityPrefab(Resource.Load(spawn_object),GetGame().GetWorld(),PARAM_SPAWN));

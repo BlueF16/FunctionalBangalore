@@ -17,28 +17,34 @@ ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
  coords 6417.476 158.622 6772.342
 }
 GenericEntity : "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et" {
- coords 6549.062 144.142 6745.352
- angleX 0.851
- angleY 0.707
- angleZ 3.587
+ coords 6455.353 147.904 6746.683
+ angleX -0.058
+ angleY 0.622
+ angleZ 5.356
+}
+StaticModelEntity : "{130BED24711F375F}PrefabsEditable/Auto/Structures/Walls/BarbedWire/E_BarbedTape_Triple.et" {
+ coords 6442.317 0 6741.932
+ angleX -0.895
+ angleY 0.449
+ angleZ -0.007
 }
 GenericEntity : "{14B2D417839BF8A3}PrefabsEditable/Auto/Structures/Military/Flags/E_FlagPole_02_V1_USSR.et" {
- coords 6549.474 144.125 6745.864
- angleX 0.892
- angleY 0.056
- angleZ 3.577
+ coords 6455.767 147.865 6747.193
+ angleX 0.003
+ angleY -0.027
+ angleZ 5.356
 }
 GenericEntity : "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et" {
- coords 6549.427 144.105 6744.366
- angleX 0.892
- angleY 0.056
- angleZ 3.577
+ coords 6446.864 149.155 6741.261
+ angleX -0.597
+ angleY -174.216
+ angleZ -19.913
 }
 SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
- coords 6550.864 143.991 6743.437
- angleX 1.783
- angleY 0.112
- angleZ 3.578
+ coords 6457.156 147.773 6744.768
+ angleX -0.888
+ angleY -0.097
+ angleZ 4.468
 }
 SCR_LoadoutManager : "{97EF4C1A41F63DDB}Prefabs/MP/Managers/Loadouts/LoadoutManager_USxUSSR.et" {
  coords 6415.758 159.012 6773.395
@@ -66,8 +72,14 @@ GenericEntity : "{A3C5CF932DE8261F}PrefabsEditable/Auto/Props/Military/AmmoBoxes
    Enabled 1
   }
  }
- coords 6549.181 144.085 6743.385
- angleX 2.622
- angleY 0.979
- angleZ 3.618
+ coords 6455.473 147.914 6744.714
+ angleX -0.956
+ angleY 0.644
+ angleZ 5.345
+}
+GenericEntity : "{AB1E83746BDF76D1}PrefabsEditable/Auto/Compositions/Misc/FreeRoamBuilding/E_BarbedTapeTriple_S_USSR_01.et" {
+ coords 6445.489 149.577 6741.763
+ angleX 2.607
+ angleY 0.448
+ angleZ 9.763
 }
