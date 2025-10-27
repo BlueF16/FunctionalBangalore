@@ -18,7 +18,7 @@ class SCR_PickUpItemActionBangalore : SCR_InventoryAction
 
 		if (!am)
 		{
-			Print("PickupAction: no ActionsManagerComponent.");
+			//Print("PickupAction: no ActionsManagerComponent.");
 			return;
 		}
 
@@ -36,13 +36,13 @@ class SCR_PickUpItemActionBangalore : SCR_InventoryAction
 
 		if (!dupAction)
 		{
-			Print("PickupAction: sibling SCR_BangaloreDuplicateAction not found.");
+			//Print("PickupAction: sibling SCR_BangaloreDuplicateAction not found.");
 			return;
 		}
 
 		// ④ Access the shared array
 		array<IEntity> spawned = dupAction.GetSpawnBangs();
-		PrintFormat("PickupAction: I see %1 spawned bangs.", spawned.Count());
+		//PrintFormat("PickupAction: I see %1 spawned bangs.", spawned.Count());
 		
 		
 		auto pInventoryManager = SCR_InventoryStorageManagerComponent.Cast( pUserEntity.FindComponent( SCR_InventoryStorageManagerComponent ) );

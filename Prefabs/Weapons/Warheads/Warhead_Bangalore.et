@@ -10,18 +10,23 @@ GenericEntity : "{1126AD9D919F82FF}Prefabs/Weapons/Warheads/Warhead_Explosive_HE
    PROJECTILE_EFFECTS {
     ExplosionDamageContainer "{5F10B4D8DC73BB97}" : "{04BC445FB74FDAA9}Prefabs/Weapons/Core/Damage/ExplosionContainer_Base.conf" {
      ExplosionEffects {
+      BaseExplosionDamage "{5D8D1EB3EF9D02C6}" {
+      }
       BaseExplosionDamage "{61DAF5E24D9CA168}" {
        DamageValue 1000
        ExplosionDamagePower 0.75
       }
       BaseExplosionDamage "{5D8D1EB3EBB36077}" {
-       DamageValue 1000
+       DamageValue 500
       }
       ExplosionImpulseEffect "{5E6D1CEE09A33086}" {
+       DamageValue 10
+       DamageFalloffCurve +{
+       }
       }
      }
-     ChargeWeight 570
-     TntEquivalent 1.456
+     ChargeWeight 2000
+     TntEquivalent 2.54
     }
     SpawnParticleEffect "{66AF6360F2C955DF}" {
      AttachToParent 1

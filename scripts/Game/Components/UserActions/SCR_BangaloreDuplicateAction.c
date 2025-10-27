@@ -15,7 +15,7 @@
 
 		ref array<IEntity> SPAWNEDBANGS = {};
 	
-		const float LIFT = 0.2;
+		const float LIFT = 0.02;
 	
 	
 	
@@ -60,12 +60,12 @@
             // Compare the item's prefab resource name with the one we're looking for
             if (prefabData.GetPrefabName() == inventory_object)
             {
-                Print("Item found in inventory: " + inventory_object, LogLevel.NORMAL);
+               // Print("Item found in inventory: " + inventory_object, LogLevel.NORMAL);
                 return true;
             }
         }
         
-        Print("Item NOT found in inventory: " + inventory_object, LogLevel.WARNING);
+        //Print("Item NOT found in inventory: " + inventory_object, LogLevel.WARNING);
         return false;
     	}
 	
@@ -103,18 +103,15 @@
 			
 			
 			
-			float y = SCR_TerrainHelper.GetTerrainY({x,0,z},GetGame().GetWorld()) + LIFT;
-		
-		
+			float y = SCR_TerrainHelper.GetTerrainY({x,0,z},GetGame().GetWorld());
 			vector newpos = {x,y,z};
 			vector normal = SCR_TerrainHelper.GetTerrainNormal(newpos,GetGame().GetWorld());
 			float pitch = Math.Atan2(normal[0], normal[1]);
 			vector  matrotation[4];
 			Math3D.DirectionAndUpMatrix(mat[2],normal,matrotation);
+			newpos[1]=y+LIFT;
 			
 			
-			mat[3]=newpos;
-			mat[1]=normal;
 			matrotation[3]=newpos;
 			
 			EntitySpawnParams PARAM_SPAWN = new EntitySpawnParams();

@@ -1,0 +1,133 @@
+SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
+ coords 8171.637 216.227 4099.865
+}
+PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 8167.439 216.24 4098.818
+}
+PS_GameModeCoop PS_GameMode_Lobby1 : "{9C2001FE7A2F2281}Prefabs/MP/Modes/PS_GameMode_Lobby.et" {
+ coords 8175.429 215.883 4098.605
+}
+GenericEntity : "{06B68C58B72EAAC6}Prefabs/Items/Equipment/Backpacks/Backpack_ALICE_Medium.et" {
+ coords 8187.558 214.856 4095.575
+ angleX 5.344
+ angleY 0.251
+ angleZ 2.695
+}
+GenericEntity : "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et" {
+ components {
+  SCR_ExplosiveTriggerComponent "{5AA692DC30B9C65A}" {
+   TriggerOffset 1
+  }
+  ActionsManagerComponent "{5AA692DC30B9C623}" {
+   additionalActions {
+    SCR_BangaloreDuplicateAction "{66B0CB459CCC7FD5}" {
+     spawn_object "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et"
+    }
+   }
+  }
+ }
+ coords 8191.744 215.365 4100.408
+ angleX 1.094
+ angleY -96.285
+ angleZ -6.397
+}
+SCR_AIGroup : "{704B4E4EC7C56B55}Prefabs/Groups/BLUFOR/Group_US_AmmoTeam_P.et" {
+ coords 8188.551 216.002 4089.804
+ angleX 23.561
+ angleY 2.87
+ angleZ 7.148
+ m_bSetPlayable 1
+}
+DecalEntity : "{925553528D276E6D}Prefabs/Decals/Asphalt/Decal_Asphalt_Cracks_03.et" {
+ coords 8191.825 0.313 4103.065
+ angleX -90
+ angleY -90
+ angleZ 90
+ scale 10
+ FarPlane 2.55
+ ClutterOccluder 1
+ Mat "{8F5FA73D378CE38D}Assets/Decals/Asphalt/Path/Data/Asphalt_Crossroad_01.emat"
+}
+StaticModelEntity : "{93E06E731212BD96}Prefabs/Structures/Walls/BarbedWire/BarbedTape_01/BarbedTape_01_Triple.et" {
+ coords 8189.482 -0.001 4104.688
+ angleX 0.77
+ angleY 86.478
+ angleZ 12.315
+ {
+  $grp StaticModelEntity : "{93E06E731212BD96}Prefabs/Structures/Walls/BarbedWire/BarbedTape_01/BarbedTape_01_Triple.et" {
+   {
+    coords 0.015 -0.066 3.205
+    angleX 1.647
+    angleY -0.053
+    angleZ -1.827
+   }
+   {
+    coords -0.006 0.025 6.437
+    angleX 0.665
+    angleY -0.041
+    angleZ -3.507
+   }
+   {
+    coords -0.017 0.077 -2.97
+    angleX -0.108
+    angleY 0.003
+    angleZ -1.716
+   }
+   {
+    coords 4.27 0.198 -0.451
+    angleX -3.739
+    angleY 0.208
+    angleZ -3.236
+   }
+   {
+    coords 4.273 0.175 2.757
+    angleX 3.171
+    angleY -0.123
+    angleZ -6.304
+   }
+   {
+    coords 4.249 0.289 5.987
+    angleX -0.324
+    angleY 0.047
+    angleZ -5.204
+   }
+   {
+    coords 4.249 0.285 -3.422
+    angleX -0.272
+    angleY 0.015
+    angleZ -4.326
+   }
+  }
+ }
+}
+GenericEntity : "{A3C5CF932DE8261F}PrefabsEditable/Auto/Props/Military/AmmoBoxes/US/E_EquipmentBoxWooden_Launcher_01_US.et" {
+ components {
+  SCR_SoundDataComponent "{5C53391603B5CF41}" {
+   Enabled 1
+  }
+  SCR_UniversalInventoryStorageComponent "{5476A2F100DF4EFF}" {
+   Enabled 1
+   MultiSlots {
+    MultiSlotConfiguration "{66B0CB41DBFF54D2}" {
+     SlotTemplate InventoryStorageSlot BANGALORE {
+      Prefab "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et"
+     }
+     NumSlots 10
+    }
+    MultiSlotConfiguration "{66B50AF1263E72F6}" {
+     SlotTemplate InventoryStorageSlot clacker {
+      Prefab "{CE0AF733722B3978}Prefabs/Items/Equipment/Detonators/BlastingMachine_M34/BlastingMachine_M34.et"
+     }
+     NumSlots 4
+    }
+   }
+  }
+  ActionsManagerComponent "{5476B36C403D4CC0}" {
+   Enabled 1
+  }
+ }
+ coords 8187.676 214.668 4093.608
+ angleX 3.576
+ angleY 0.056
+ angleZ 0.897
+}
