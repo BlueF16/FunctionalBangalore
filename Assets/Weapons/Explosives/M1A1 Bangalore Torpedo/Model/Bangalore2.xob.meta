@@ -1,0 +1,49 @@
+MetaFileClass {
+ Name "{D6F861F89FA9F83B}Assets/Weapons/Explosives/M1A1 Bangalore Torpedo/Model2/Bangalore2.xob"
+ Configurations {
+  FBXResourceClass PC {
+   MaterialAssigns {
+    MaterialAssignClass "{68AF5CB865E9B143}" {
+     SourceMaterial "WorldGridMaterial"
+     AssignedMaterial "{16CC4C575F050913}Assets/Weapons/Explosives/M1A1 Bangalore Torpedo/Model2/Data/WorldGridMaterial.emat"
+    }
+   }
+   MeshParams {
+    MeshParam defaultMaterial {
+    }
+   }
+   GeometryParams {
+    GeometryParam UBX_M1A1 {
+     LayerPreset "FireGeo"
+     SurfaceProperties {
+      "{BF7032579F3C450F}Common/Materials/Game/Metal/metal_1mm.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+   }
+   Common TXOCommonClass "{68AF5CB865FB57E3}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{68AF5CB865FB550B}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{68AF5CB865FB55F2}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{68AF5CB865FB4A1C}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS5 : PC {
+   Common TXOCommonClass "{68AF5CB865FB4A51}" : "{F62AA8E7B8EA9D26}Configs/System/ResourceTypes/PS5/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{68AF5CB865FB4A87}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}

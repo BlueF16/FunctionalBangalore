@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B57F6B0B1AD14098}Assets/Weapons/Explosives/M1A1 Bangalore Torpedo/Model3/Data/WorldGridMaterial.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

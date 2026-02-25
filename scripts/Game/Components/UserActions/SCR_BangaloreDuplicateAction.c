@@ -15,7 +15,7 @@
 
 		ref array<IEntity> SPAWNEDBANGS = {};
 	
-		const float LIFT = 0.02;
+		const float LIFT = 0.01;
 	
 	
 	
@@ -97,9 +97,9 @@
 			vector orient=pOwnerEntity.GetYawPitchRoll();
 			float x = mat[3][0];
 			float z = mat[3][2];
-			float angley = orient[0]+90;
-			x = x + Math.Sin(angley * Math.DEG2RAD) * m_fOffset * (SPAWNEDBANGS.Count()+1);
-			z = z + Math.Cos(angley * Math.DEG2RAD) * m_fOffset* (SPAWNEDBANGS.Count()+1);
+			float angley = orient[0];
+			x = x - Math.Sin(angley * Math.DEG2RAD) * m_fOffset * (SPAWNEDBANGS.Count()+1);
+			z = z - Math.Cos(angley * Math.DEG2RAD) * m_fOffset* (SPAWNEDBANGS.Count()+1);
 			
 			
 			

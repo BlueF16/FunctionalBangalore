@@ -1,0 +1,82 @@
+GenericEntity : "{1CC0CBB56B9F7ADB}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112_base.et" {
+ ID "5968D2B6A82C6019"
+ components {
+  MeshObject "{5968D9C73C08706E}" {
+   Object "{D6F861F89FA9F83B}Assets/Weapons/Explosives/M1A1 Bangalore Torpedo/Model/Bangalore2.xob"
+   Materials {
+    MaterialAssignClass "{68AEBE3592FE7589}" {
+     SourceMaterial "WorldGridMaterial"
+     AssignedMaterial "{B4913C4FE10148AF}Assets/Structures/BuildingsParts/Doors/Data/HatchDoor_LightBeacon_camouflage_01_MLOD.emat"
+    }
+   }
+  }
+  SCR_ExplosiveChargeInventoryItemComponent "{5AA692DC30B9C62B}" {
+   Attributes SCR_ItemAttributeCollection "{60D6BB563667D737}" {
+    ItemDisplayName WeaponUIInfo "{60D6BB563543F2F2}" {
+     Name "M1A1 Bangalore"
+     Description "M1A1 Bangalore - Utilized to breach obstacles."
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{5F10E041E06EA55A}" {
+     AnimationInstance "{0350283642830782}anims/workspaces/player/player_main_rifle.asi"
+     AnimationIKPose "{BA25DD5CEFEE4198}Assets/Weapons/MachineGuns/M60/anims/anm/p_M60_ik.anm"
+     HandAdditiveRotation 90 90 90
+    }
+    m_Size SLOT_2x1
+   }
+  }
+  SCR_ExplosiveTriggerComponent "{5AA692DC30B9C65A}" {
+   PROJECTILE_EFFECTS {
+    ExplosionEffect "{5F10E04100CCC508}" {
+     EffectPrefab "{A538B7481617A645}Prefabs/Weapons/Warheads/Warhead_Bangalore.et"
+    }
+   }
+  }
+  SCR_MineDamageManager "{5AA692DC30B9C651}" {
+   "Additional hit zones" {
+    SCR_HitZone Main {
+    }
+   }
+  }
+  SCR_PlaceableItemComponent "{5AA692DC30B9C62D}" {
+   m_fMaxPlacementDistance 2
+  }
+  SlotManagerComponent "{5F1CD138A009B549}" {
+   Slots {
+    FuzeSlotInfo timedFuze_PoC {
+     Offset -0.0022 0.0008 0.0079
+     Angles 90 90 -90.4026
+    }
+    FuzeSlotInfo remoteFuze_PoC {
+     Offset -0.0022 0.0008 0.0079
+     Angles 90 90 -90.4026
+    }
+   }
+  }
+  WeaponComponent "{5AA692DC30B9C621}" {
+   WeaponType RocketLauncher
+   AllowedRaise "Only lowered"
+   UIInfo GrenadeUIInfo "{5F10E042F3D3E901}" {
+    Name "M1A1 Bangalore"
+    Description "M1A1 Bangalore"
+   }
+  }
+  ActionsManagerComponent "{5AA692DC30B9C623}" {
+   additionalActions {
+    SCR_PickUpItemActionBangalore "{5AA692DC30B9C63D}" {
+     inventory_object "{17A2075D98B62E52}Prefabs/Weapons/Explosives/M1A1_Bangalore/M1A1_Bangalore.et"
+    }
+    SCR_BangaloreDuplicateAction "{68AEBE37B56F19B4}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{68AEBE33EEBA2E17}" {
+      Name "Push Bangalore"
+     }
+     m_fOffset 0.98
+     spawn_object "{17A2075D98B62E52}Prefabs/Weapons/Explosives/M1A1_Bangalore/M1A1_Bangalore.et"
+     inventory_object "{17A2075D98B62E52}Prefabs/Weapons/Explosives/M1A1_Bangalore/M1A1_Bangalore.et"
+    }
+   }
+  }
+ }
+}

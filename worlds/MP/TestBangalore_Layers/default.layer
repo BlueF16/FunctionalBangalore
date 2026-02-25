@@ -10,11 +10,8 @@ GenericEntity : "{0C923757B8B8306B}Prefabs/Compositions/Misc/FreeRoamBuilding/Ba
   }
  }
 }
-GenericEntity : "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et" {
- coords 126.918 1 124.677
-}
-GenericEntity : "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et" {
- coords 119.91 1 128.891
+GenericEntity : "{17A2075D98B62E52}Prefabs/Weapons/Explosives/M1A1_Bangalore/M1A1_Bangalore.et" {
+ coords 124.066 1 130.708
 }
 $grp StaticModelEntity : "{93E06E731212BD96}Prefabs/Structures/Walls/BarbedWire/BarbedTape_01/BarbedTape_01_Triple.et" {
  {
@@ -42,7 +39,7 @@ GenericEntity : "{A3C5CF932DE8261F}PrefabsEditable/Auto/Props/Military/AmmoBoxes
    MultiSlots {
     MultiSlotConfiguration "{66B0CB41DBFF54D2}" {
      SlotTemplate InventoryStorageSlot BANGALORE {
-      Prefab "{181317B4248889D8}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_FUNCTIONAL.et"
+      Prefab "{17A2075D98B62E52}Prefabs/Weapons/Explosives/M1A1_Bangalore/M1A1_Bangalore.et"
      }
      NumSlots 10
     }
@@ -53,7 +50,4 @@ GenericEntity : "{A3C5CF932DE8261F}PrefabsEditable/Auto/Props/Military/AmmoBoxes
   }
  }
  coords 123.324 1 126.286
-}
-GenericEntity : "{C3E5D94AF3627E55}Prefabs/Weapons/Explosives/Bangalore Torpedo/L2A2_BANGALORE_NOACTION.et" {
- coords 124.145 1 118.151
 }
