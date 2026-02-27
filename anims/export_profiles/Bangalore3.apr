@@ -1,0 +1,16 @@
+$animExportProfile {
+ $tracks {
+   "Scene_Root"                 ""                           "TRA"
+   "M1A1"                       "Scene_Root"                 "RA"
+   "Collada visual scene group" "M1A1"                       "RA"
+   "Cylinder.003"               "Collada visual scene group" "RA"
+   "Cylinder.000"               "Collada visual scene group" "RA"
+   "Armature"                   "Scene_Root"                 "RA"
+   "root"                       "Armature"                   "RA"
+   "snap_hand_right"            "root"                       "RA"
+   "snap_hand_right_end"        "snap_hand_right"            "RA"
+   "snap_hand_left"             "root"                       "RA"
+   "snap_hand_left_end"         "snap_hand_left"             "RA"
+  
+ }
+}

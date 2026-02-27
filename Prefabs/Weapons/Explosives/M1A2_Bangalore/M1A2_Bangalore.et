@@ -1,0 +1,72 @@
+GenericEntity : "{1CC0CBB56B9F7ADB}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112_base.et" {
+ ID "5968D2B6A82C6019"
+ components {
+  MeshObject "{5968D9C73C08706E}" {
+   Object "{1C79A86F28AE7DC6}Assets/Weapons/Explosives/M1A1 Bangalore Torpedo/Model3/Bangalore3.xob"
+  }
+  SCR_ExplosiveChargeInventoryItemComponent "{5AA692DC30B9C62B}" {
+   Attributes SCR_ItemAttributeCollection "{60D6BB563667D737}" {
+    ItemDisplayName WeaponUIInfo "{60D6BB563543F2F2}" {
+     Name "M1A2 Bangalore Torpedo"
+     Description "Engineers Lead The Way"
+    }
+   }
+  }
+  SCR_ExplosiveTriggerComponent "{5AA692DC30B9C65A}" {
+   PROJECTILE_EFFECTS {
+    ExplosionEffect "{5F10E04100CCC508}" {
+     EffectPrefab "{A538B7481617A645}Prefabs/Weapons/Warheads/Warhead_Bangalore.et"
+    }
+   }
+  }
+  SCR_MineDamageManager "{5AA692DC30B9C651}" {
+   "Additional hit zones" {
+    SCR_HitZone Main {
+    }
+   }
+  }
+  SCR_PlaceableItemComponent "{5AA692DC30B9C62D}" {
+   m_fMaxPlacementDistance 2.5
+  }
+  SlotManagerComponent "{5F1CD138A009B549}" {
+   Slots {
+    FuzeSlotInfo timedFuze_PoC {
+     Offset -0.0028 0.0038 0.7507
+     Angles 90 90 -90.4052
+    }
+    FuzeSlotInfo remoteFuze_PoC {
+     Offset -0.0028 0.0038 0.7507
+     Angles 90 90 -90.4052
+    }
+   }
+  }
+  WeaponComponent "{5AA692DC30B9C621}" {
+   UIInfo GrenadeUIInfo "{5F10E042F3D3E901}" {
+    Name "M1A2"
+    Description "Torpedo Bangalore"
+   }
+  }
+  ActionsManagerComponent "{5AA692DC30B9C623}" {
+   additionalActions {
+    SCR_PickUpItemActionBangalore "{5AA692DC30B9C63D}" {
+     UIInfo SCR_ActionUIInfo "{52E6EC7591413A14}" {
+      Name "Pick Up Bangalore(s)"
+     }
+     ActionTitle "Pick Up Bangalore(s)"
+     inventory_object "{6C15A3726729087D}Prefabs/Weapons/Explosives/M1A2_Bangalore/M1A2_Bangalore.et"
+    }
+    SCR_BangaloreDuplicateAction "{68B6E6E72D52C847}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{68B6E6E7D3D8A06A}" {
+      Name "Push Bangalore"
+     }
+     m_fOffset 1.45
+     spawn_object "{6C15A3726729087D}Prefabs/Weapons/Explosives/M1A2_Bangalore/M1A2_Bangalore.et"
+     inventory_object "{6C15A3726729087D}Prefabs/Weapons/Explosives/M1A2_Bangalore/M1A2_Bangalore.et"
+    }
+   }
+  }
+ }
+}
