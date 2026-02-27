@@ -39,7 +39,7 @@ GenericEntity : "{63DA21D3BBFFE518}Prefabs/Props/Military/AmmoBoxes/FIA/Equipmen
  coords 126.326 1 131.938
 }
 GenericEntity : "{6C15A3726729087D}Prefabs/Weapons/Explosives/M1A2_Bangalore/M1A2_Bangalore.et" {
- coords 124.919 1 131.147
+ coords 124.009 1 131.477
 }
 $grp StaticModelEntity : "{93E06E731212BD96}Prefabs/Structures/Walls/BarbedWire/BarbedTape_01/BarbedTape_01_Triple.et" {
  {
@@ -56,4 +56,10 @@ $grp StaticModelEntity : "{93E06E731212BD96}Prefabs/Structures/Walls/BarbedWire/
   }
   coords 131.932 0 124.329
  }
+}
+GenericEntity : "{9C5C20FB0E01E64F}Prefabs/Weapons/Launchers/M72/Launcher_M72A3.et" {
+ coords 123.222 1 132.291
+}
+GenericEntity : "{D182DCDD72BF7E34}Prefabs/Weapons/MachineGuns/M60/MG_M60.et" {
+ coords 125.582 1 132.943
 }

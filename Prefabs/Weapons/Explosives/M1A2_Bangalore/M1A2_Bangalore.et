@@ -10,6 +10,15 @@ GenericEntity : "{1CC0CBB56B9F7ADB}Prefabs/Weapons/Explosives/DemoBlock_M112/Dem
      Name "M1A2 Bangalore Torpedo"
      Description "Engineers Lead The Way"
     }
+    ItemPhysAttributes ItemPhysicalAttributes "{5F10E041E86255CD}" {
+     Weight 6
+     ItemDimensions 25 25 25
+     ItemVolume 2500
+    }
+    ItemAnimationAttributes ItemAnimationAttributes "{5F10E041E06EA55A}" {
+     AnimationIKPose "{7184F74F166A6D21}Assets/Weapons/Flares/M127A1/anims/anm/p_erc_M127A1_ik.anm"
+     AnimIKPoseProneOverride ""
+    }
    }
   }
   SCR_ExplosiveTriggerComponent "{5AA692DC30B9C65A}" {
@@ -53,6 +62,7 @@ GenericEntity : "{1CC0CBB56B9F7ADB}Prefabs/Weapons/Explosives/DemoBlock_M112/Dem
       Name "Pick Up Bangalore(s)"
      }
      ActionTitle "Pick Up Bangalore(s)"
+     Duration 10
      inventory_object "{6C15A3726729087D}Prefabs/Weapons/Explosives/M1A2_Bangalore/M1A2_Bangalore.et"
     }
     SCR_BangaloreDuplicateAction "{68B6E6E72D52C847}" {
@@ -62,10 +72,16 @@ GenericEntity : "{1CC0CBB56B9F7ADB}Prefabs/Weapons/Explosives/DemoBlock_M112/Dem
      UIInfo SCR_ActionUIInfo "{68B6E6E7D3D8A06A}" {
       Name "Push Bangalore"
      }
+     Duration 10
+     CanAggregate 1
      m_fOffset 1.45
      spawn_object "{6C15A3726729087D}Prefabs/Weapons/Explosives/M1A2_Bangalore/M1A2_Bangalore.et"
      inventory_object "{6C15A3726729087D}Prefabs/Weapons/Explosives/M1A2_Bangalore/M1A2_Bangalore.et"
     }
+   }
+  }
+  WeaponAnimationComponent "{5F1CD773403DEE55}" {
+   AnimInjection AnimationAttachmentInfo "{5F1CD77366000D91}" {
    }
   }
  }
